@@ -26,8 +26,8 @@ function App() {
     } else if (userName.trim().length < 3){
       setErrorSelect("Confirma que la información sea correcta! El nombre debe contener al menos 3 caracteres")
       return false
-    } else if (petName.trim().length < 3){
-      setErrorSelect("Confirma que la información sea correcta! El nombre de tu mascota debe contener al menos 3 caracteres")
+    } else if (petName.trim().length < 6){
+      setErrorSelect("Confirma que la información sea correcta! El nombre de tu mascota debe contener al menos 6 caracteres")
       return false
     }else{
       return true
@@ -49,16 +49,22 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Formulario para el registro de mascotas</h1>
-      <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Ingresa tu nombre" value={userName}
-            onChange={onChangeUserName}/> <br/>
-            <input type="text" placeholder="Nombre de tu mascota" value={petName}
-            onChange={onChangePetName}/> <br/>
-            <input type="submit" value="enviar"/>
-      </form>
-      <div className="error">{errorSelect}</div>
-      {send && <Card userName={userName} petName={petName}/>}
+      <div className="container">
+        <div className="form">      
+          <h3>Formulario para el registro de mascotas</h3>
+          <form onSubmit={handleSubmit}>
+                  
+          <input type="text" placeholder="Ingresa tu nombre" value={userName}
+                onChange={onChangeUserName}/> <br/>
+                <input type="text" placeholder="Nombre de tu mascota" value={petName}
+                onChange={onChangePetName}/> <br/>
+                <input type="submit" value="Enviar"/>
+          </form>
+          <div className="error">{errorSelect}</div>
+        </div>
+      
+        {send && <Card userName={userName} petName={petName}/>}
+        </div>
     </div>
   );
 }

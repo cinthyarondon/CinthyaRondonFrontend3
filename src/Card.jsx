@@ -3,10 +3,12 @@
 
 function Card({userName, petName}) {
   return (
-    <div>
-      <h3>Registro de mascotas</h3>
-      <h4>Tu nombre: {userName}</h4>
-      <h4>Tu mascota: {petName}</h4>
+    <div className="form">
+      <hr></hr>
+      <br/>
+      <h4>Registro de mascotas</h4>
+      <label>Tu nombre: {userName}</label> <br/>
+      <label>Tu mascota: {petName}</label>
     </div>
   );
 }
