@@ -1,10 +1,12 @@
 //Este componente deberia recibir por props y mostrar en pantalla la informacion
 //que envia el usuario
 
-function Card() {
+function Card({userName, petName}) {
   return (
     <div>
-      <h2>Esto es un componente</h2>
+      <h3>Registro de mascotas</h3>
+      <h4>Tu nombre: {userName}</h4>
+      <h4>Tu mascota: {petName}</h4>
     </div>
   );
 }
