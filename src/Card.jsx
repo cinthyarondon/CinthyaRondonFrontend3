@@ -1,6 +1,3 @@
-//Este componente deberia recibir por props y mostrar en pantalla la informacion
-//que envia el usuario
-
 function Card({userName, petName}) {
   return (
     <div className="form">
